@@ -31,7 +31,7 @@ end
 def update
 	@post = Post.find(params[:id])
 
-	if @post =update_attributes(post_params)
+	if @post.update_attributes(post_params)
 		redirect_to posts_path, :notice => "Your post has been update"
 	else
 		render "edit"
